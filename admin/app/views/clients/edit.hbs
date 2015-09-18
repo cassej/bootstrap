@@ -1,0 +1,90 @@
+<div class="breadcrumbs shadow-z-1">
+	<h2><i class="mdi-action-face-unlock"></i> Клиенты</h2>
+</div>
+
+<div class="row">
+	<div class="panel">
+		<div class="panel-body">
+			<nav class="tab-nav">
+				<ul class="nav nav-justified">
+					<li class="active"><a href="#common" data-toggle="tab" aria-expanded="true">Общая информация</a></li>
+					<li><a href="#comments" data-toggle="tab" aria-expanded="false">Комментарии</a></li>
+					<li><a href="#documents" data-toggle="tab" aria-expanded="false">Документы</a></li>
+					<li><a href="#addresses" data-toggle="tab" aria-expanded="false">Адреса</a></li>
+				</ul>
+				<div class="tab-content">
+					<div role="tabpanel" id="common" class="tab-pane fade in active">
+						<form id="client" method="post" class="form-horizontal" onsubmit="return false;">
+							{{#if client}}
+								<input name="id" type="hidden" value="{{client.id}}">
+							{{/if}}
+							<div class="form-group">
+								<label class="col-lg-4">Дата:</label>
+								<div class="col-lg-8">
+									<input name="date" type="text" class="form-control date" value="{{client.created}}">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-4">Компания:</label>
+								<div class="col-lg-8">
+									<input name="name" type="text" class="form-control" value="{{client.name}}">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-4">Общий телефон:</label>
+								<div class="col-lg-8">
+									<input name="phone" type="text" class="form-control" value="{{client.phone}}">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-4">Сайт:</label>
+								<div class="col-lg-8">
+									<input name="site" type="text" class="form-control" value="{{client.site}}">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-4">E-mail:</label>
+								<div class="col-lg-8">
+									<input name="email" type="text" class="form-control" value="{{client.email}}">
+								</div>
+							</div>
+							<div class="form-group">
+								<label class="col-lg-4">Описание:</label>
+								<div class="col-lg-8">
+									<textarea name="description" class="form-control textarea-autosize">{{client.description}}</textarea>
+								</div>
+							</div>
+
+							{{#if client}}
+								<div class="form-group">
+									<label class="col-lg-4">Логотип:</label>
+									<div class="col-lg-6">
+										<input type="text" readonly class="form-control floating-label" placeholder="Выбрать файл...">
+										<input name="logo" type="file" id="logo">
+									</div>
+									<div class="col-lg-2">
+										<button class="btn btn-material-light-blue pull-right btn-sm logo">загрузить</button>
+									</div>
+								</div>
+
+								{{#if client.logo}}
+									<div class="thumb">
+										<img src="{{client.logo}}" alt=""/>
+									</div>
+								{{/if}}
+							{{/if}}
+							<button type="submit" class="pull-right btn btn-material-green">{{button}}</button>
+						</form>
+					</div>
+					<div role="tabpanel" id="comments" class="tab-pane fade in">
+
+					</div>
+					<div role="tabpanel" id="documents" class="tab-pane fade in"></div>
+					<div role="tabpanel" id="addresses" class="tab-pane fade in"></div>
+				</div>
+			</nav>
+		</div>
+	</div>
+
+
+</div>

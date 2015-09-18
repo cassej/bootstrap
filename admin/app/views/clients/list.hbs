@@ -1,0 +1,39 @@
+<div class="breadcrumbs shadow-z-1">
+	<h2><i class="mdi-action-face-unlock"></i> Клиенты</h2>
+</div>
+
+<div class="row">
+	<div class="panel panel-material-light-blue">
+		<div class="panel-heading">
+			<div class="pull-right">
+				<a href="/clients/edit/new" class="btn btn-material-blue" style="margin: 0">Добавить</a>
+			</div>
+			<h4>Клиенты</h4>
+
+		</div>
+		<div class="panel-body">
+			<table class="table table-striped">
+				<tr>
+					<th nowrap>Дата</th>
+					<th>Название компании</th>
+					<th nowrap>Статус</th>
+					<th nowrap>Действия</th>
+				</tr>
+				{{#each clients}}
+				<tr>
+					<td nowrap>{{created}}</td>
+					<td style="width: 100%">{{name}}</td>
+					<td nowrap>
+						{{#is status '1'}}Новый{{/is}}
+						{{#is status '2'}}Прозвон{{/is}}
+					</td>
+					<td nowrap><a href="/clients/edit/{{id}}" class="btn btn-xs btn-success" style="margin: 0">Редактировать</a></td>
+				</tr>
+				{{/each}}
+			</table>
+
+		</div>
+	</div>
+
+
+</div>

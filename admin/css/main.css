@@ -1,0 +1,117 @@
+body {
+	background: #eee;
+}
+.login-bg {
+	height: 100%;
+	width: 100%;
+	background: #f3eeea url('/img/bg.jpg') 50% 50% no-repeat;
+	background-size: cover;
+}
+
+.navbar-right {
+	display: none;
+}
+
+@media only screen
+and (min-device-width : 768px) {
+	.login, .register, .recover {
+		position: fixed;
+		top: 50%;
+		left: 50%;
+	}
+
+	.login {
+		margin: -185px 0 0 -240px;
+		height: 370px;
+	}
+
+	.register {
+		margin: -260px 0 0 -240px;
+		height: 520px;
+	}
+
+	.recover {
+		margin: -165px 0 0 -240px;
+		height: 330px;
+	}
+
+
+	.navbar-right {
+		display: block;
+	}
+}
+
+.login, .register, .recover {
+	min-width: 240px;
+	max-width: 480px;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.7);
+	padding: 30px;
+}
+
+.logo {
+	height: auto;
+	margin: -5px auto;
+	display: block;
+	padding-right: 10px;
+}
+
+.btn {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.login h2, .register h2, .recover h2 {
+	margin-bottom: 10px;
+}
+
+.login input, .recover input, .register input, .register select {
+	margin-bottom: 30px;
+}
+
+#content {
+	margin-top: 50px;
+}
+
+.navbar {
+	padding: 0 15px;
+	height: 50px;
+}
+
+.navbar-brand {
+	padding: 5px 5px;
+}
+
+.navbar .navbar-toggle {
+	display: block;
+}
+
+.navbar .navbar-nav li>a {
+	padding-top: 15px;
+	padding-bottom: 0;
+}
+
+.breadcrumbs {
+	padding: 20px 0 10px 20px;
+	margin: -40px -20px 20px -20px;
+	background: rgba(139, 195, 74, 1);
+	color: #fff;
+}
+
+.table {
+	font-size: 12px;
+}
+
+.post {
+	border-bottom: 1px solid #ccc;
+}
+
+.footer {
+	height: 40px;
+	padding: 0 30px;
+	line-height: 40px;
+	background: #fff;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
